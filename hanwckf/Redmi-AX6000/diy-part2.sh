@@ -6,6 +6,10 @@
 # See /LICENSE for more information.
 #
 # Custom for REDMI AX6000
+mkdir package/community
+cd package/community
+git clone --depth=1 https://github.com/SincereXIA/buaa-login.git
+cd ../../
 sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate
 sed -i 's/ImmortalWrt/OpenWrt/g' package/base-files/files/bin/config_generate
 sed -i 's/pool.ntp.org/3.openwrt.pool.ntp.org/g' package/base-files/files/bin/config_generate
